@@ -21,9 +21,7 @@ for i in range(0, 3):
                 sg_linha = n
         if p == 2:
             terc_coluna += n
-        print('[', end= '')
-        print(n, end= '')
-        print(']', end= '')
+        print(f'[ {n} ]', end= '')
     print('')
 
 print('-='*20)

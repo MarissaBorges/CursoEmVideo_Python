@@ -10,7 +10,5 @@ for i in range(0, 3):
 print('-='*20)
 for i in range(0, 3):
     for n in matriz[i]:
-        print('[', end= '')
-        print(n, end= '')
-        print(']',end= '')
+        print(f'[ {n} ]', end= '')
     print('')
