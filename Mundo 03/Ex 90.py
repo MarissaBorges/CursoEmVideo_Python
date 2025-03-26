@@ -8,6 +8,8 @@ media = float(input(f'Média de {nome}: '))
 dados = {'Nome': nome, 'Média': media}
 if media > 7:
     dados['Situação'] = 'Aprovado'
+elif 5 <= media < 7:
+    dados['Situação'] = 'Recuperação'
 else:
     dados['Situação'] = 'Reprovado'
 print('-='*20)

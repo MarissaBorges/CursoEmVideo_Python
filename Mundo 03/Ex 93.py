@@ -4,9 +4,8 @@
 
 dados = {}
 gols = []
-nome = str(input('Nome do Jogador: '))
-dados['Nome'] = nome
-qua = int(input(f'Quantas partidas {nome} jogou? '))
+dados['Nome'] = str(input('Nome do Jogador: '))
+qua = int(input(f'Quantas partidas {dados["Nome"]} jogou? '))
 
 for c in range(1, qua+1):
     gols.append(int(input(f'Quantos gols na partida {c}? ')))

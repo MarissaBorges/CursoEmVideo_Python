@@ -6,15 +6,12 @@ pessoa = {}
 grupo = []
 sidade = 0
 while True:
-    nome = str(input('Nome: '))
-    pessoa['Nome'] = nome
-    sexo = str(input('Sexo [M/F]: ')).lower().strip()
-    while sexo not in 'mf':
-        sexo = str(input('Sexo [M/F]: ')).lower().strip()
-    pessoa['Sexo'] = sexo
-    idade = int(input('Idade: '))
-    pessoa['Idade'] = idade
-    sidade += idade
+    pessoa['Nome'] = str(input('Nome: '))
+    pessoa['Sexo'] = str(input('Sexo [M/F]: ')).lower().strip()
+    while pessoa['Sexo'] not in 'mf':
+        pessoa['Sexo'] = str(input('Sexo [M/F]: ')).lower().strip()
+    pessoa['Idade'] = int(input('Idade: '))
+    sidade += pessoa['idade']
     v = str(input('Quer continuar? [S/N] ')).lower().strip()
     while v not in 'sn':
         v = str(input('Quer continuar? [S/N]: ')).lower().strip()

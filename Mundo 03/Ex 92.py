@@ -5,22 +5,16 @@
 from datetime import date
 
 dados = {}
-nome = str(input('Nome: '))
-dados['Nome'] = nome
+dados['Nome'] = str(input('Nome: '))
 ano_nasc = int(input('Informe o ano de nascimento: '))
-idade = date.today().year - ano_nasc
-dados['Idade'] = idade
-ctps = int(input('Carteira de Trabalho (0 não tem): '))
-dados['CTPS'] = ctps
-if ctps != 0:
-    ano_contra = int(input('Ano de Contratação: '))
-    dados['Contratação'] = ano_contra
-    salario = int(input('Salário: R$ '))
-    dados['Salário'] = salario
-    resto_apose = 35 - (date.today().year - ano_contra)
-    aposentadoria = idade + resto_apose
-    dados['Aposentadoria'] = aposentadoria
+dados['Idade'] = date.today().year - ano_nasc
+dados['CTPS'] = int(input('Carteira de Trabalho (0 não tem): '))
+if dados['CTPS'] != 0:
+    dados['Contratação'] = int(input('Ano de Contratação: '))
+    dados['Salário'] = int(input('Salário: R$ '))
+    resto_apose = 35 - (date.today().year - dados['Contratação'])
+    dados['Aposentadoria'] = dados['Idade'] + resto_apose
 
-print(dados)
+print('-=' * 20)
 for k, v in dados.items():
-    print(f'{k} tem o valor {v}')
+    print(f'    {k} tem o valor {v}')
