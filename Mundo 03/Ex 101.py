@@ -1,9 +1,8 @@
 # -----------------------------------------------
 #    EXERCÍCIO 101
 # -----------------------------------------------
-from datetime import date
-
 def voto(ano):
+    from datetime import date # Escopo de importação
     hoje = date.today().year
     idade = hoje - ano
     if idade >= 18 and idade < 65:
