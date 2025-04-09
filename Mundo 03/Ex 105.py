@@ -10,38 +10,23 @@ def notas(*num, sit=False):
     :return: um dicionario com várias informações sobre a situação da turma.
     '''
     turma = {}
-    total = maior = menor = media = s = 0
-    for pos, c in enumerate(num):
-        s += c
-        if pos == 0:
-            maior = menor = c
-        else:
-            if c > maior:
-                maior = c
-            if c < menor:
-                menor = c
-    
-    total = len(num)
-    media = s / total
-    if media > 7:
-        situacao = 'BOA'
-    elif media < 6:
-        situacao = 'RUIM'
-    else:
-        situacao = 'RAZOÁVEL'
-    
-    turma['total'] = total
-    turma['maior'] = maior
-    turma['menor'] = menor
-    turma['media'] = media
+    turma['total'] = len(num)
+    turma['maior'] = max(num)
+    turma['menor'] = min(num)
+    turma['media'] = sum(num) / len(num)
 
     if sit:
-        turma['situação'] = situacao
-        return turma
-    else:
-        return turma
+        if turma['media'] >= 7:
+            turma['situação'] = 'BOA'
+        elif turma['media'] < 6:
+            turma['situação'] = 'RUIM'
+        else:
+            turma['situação'] = 'RAZOÁVEL'
+    
+    return turma
 
 
-resp = notas(5.5, 9.5, 10, 6.5)
+resp = notas(5.5, 9.5, 10, 6.5, sit=True)
 print(resp)
+print()
 help(notas)
