@@ -1,26 +1,18 @@
-def aumentar(p, v, f=False):
+def aumentar(p=0, v=0, f=False):
     p = p + (p * v / 100)
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def diminuir(p, v, f=False):
+def diminuir(p=0, v=0, f=False):
     p = p - (p * v / 100)
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def dobro(p, f=False):
+def dobro(p=0, f=False):
     p = p * 2
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def metade(p, f=False):
+def metade(p=0, f=False):
     p = p / 2
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def moeda(num):
-    return (f'R${num:.2f}')
+def moeda(num=0, moeda='R$'):
+    return (f'{moeda}{num:.2f}').replace('.', ',')

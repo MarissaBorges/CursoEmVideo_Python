@@ -1,31 +1,33 @@
-def moeda(num):
-    return (f'R${num:.2f}')
+def moeda(num=0, moeda='R$'):
+    return (f'{moeda}{num:.2f}').replace('.', ',')
 
-def aumentar(p, v, f=False):
+def aumentar(p=0, v=0, f=False):
     p = p + (p * v / 100)
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def diminuir(p, v, f=False):
+def diminuir(p=0, v=0, f=False):
     p = p - (p * v / 100)
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def dobro(p, f=False):
+def dobro(p=0, f=False):
     p = p * 2
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def metade(p, f=False):
+def metade(p=0, f=False):
     p = p / 2
-    if f:
-        p = moeda(p)
-    return p
+    return p if not f else moeda(p)
 
-def tabela(msg, preco):
+def tabela(msg, preco=0):
     print(f'{msg:<20}', end='')
     print(f'{preco:<10}')
 
+def resumo(valor, porc1, porc2):
+    print('-'*30)
+    print(f'{"RESUMO DO VALOR":^30}')
+    print('-'*30)
+    tabela('Preço analisado:', moeda(valor))
+    tabela('Dobro do preço:', dobro(valor, True))
+    tabela('Metade do preço:', metade(valor, True))
+    tabela(f'{porc1}% de aumento:', aumentar(valor, porc1, True))
+    tabela(f'{porc2}% de redução', diminuir(valor, porc2, True))
+    print('-'*30)
