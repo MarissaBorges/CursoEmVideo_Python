@@ -1,4 +1,4 @@
-from Ex115.lib.interface import *
+from Ex115.sistema.interface import *
 
 def definir_caminho(nome):
     import os
