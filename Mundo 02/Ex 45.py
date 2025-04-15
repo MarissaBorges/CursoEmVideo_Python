@@ -1,13 +1,17 @@
 # -----------------------------------------------
 #    EXERCÍCIO 45
 # -----------------------------------------------
+
+# PROJETO DO JOGO DE JOKENPÔ
+
 from random import choice
 from time import sleep
+
 limpo = '\033[m'
 print('{}_-=-{}'.format('\033[1;35m', limpo)*20)
 print('{}EU SOU PROFISSIONAL DE JOKENPÔ!!! vamos ver se você consegue ganhar de mim...{}'.format('\033[m',limpo))
 print('{}_-=-{}'.format('\033[1;35m', limpo)*20)
-jog = str(input('Digite "sair" para fechar o programa\nEscolha pedra\ papel\ tesoura:{} '.format('\033[32m'))).lower()
+jog = str(input('Digite "sair" para fechar o programa\nEscolha pedra/ papel/ tesoura:{} '.format('\033[32m'))).lower()
 
 ganho = 0
 perca = 0
