@@ -1,8 +1,12 @@
 # -----------------------------------------------
 #    EXERCÍCIO 115
 # -----------------------------------------------
-from Ex115.lib.interface import *
-from Ex115.lib.arquivo import *
+
+# PROJETO FINAL DO CURSO EM VÍDEO
+# SIMULA A MANIPULAÇÃO DE UM SISTEMA SIMPLES COM BANDO DE DADOS EM ARQUIVO .TXT
+
+from Ex115.sistema.arquivo import *
+from Ex115.sistema.interface import *
 
 arq = 'bancoDeDados.txt'
 
