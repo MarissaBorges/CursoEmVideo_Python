@@ -1,6 +1,9 @@
 # -----------------------------------------------
 #    EXERCÍCIO 35
 # -----------------------------------------------
+
+# PROJETO QUE ANALISA SEGMENTOS DE RETAS E INFORMA SE É POSSÍVEL FORMAR UM TRIÂNGULO E QUAL SEU TIPO
+
 r1 = float(input('informe o comprimento 1: '))
 r2 = float(input('Informe o comprimento 2: '))
 r3 = float(input('Informe o último comprimento: '))
