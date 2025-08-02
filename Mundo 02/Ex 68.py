@@ -2,9 +2,9 @@
 #    EXERCÍCIO 68
 # -----------------------------------------------
 from random import randint
-print(f'{'^-'*20}')
-print('{:^40}'.format('VAMOS JOGAR PAR OU ÍMPAR'))
-print(f'{'^-'*20}')
+print(f"{'^-'*20}")
+print("{:^40}".format('VAMOS JOGAR PAR OU ÍMPAR'))
+print(f"{'^-'*20}")
 c = v = 0
 while True:
     com = randint(0, 10)
@@ -15,13 +15,13 @@ while True:
         r = 'par'
     else:
         r = 'impar' 
-    print(f'{'-'*40}')
+    print(f"{'-'*40}")
     print(f'Você jogou {n} e o computador {com}.\nA soma é {n+com} DEU {r.upper()}')
-    print(f'{'-'*40}')
+    print(f"{'-'*40}")
     if eN == r[0]:
         print('Você VENCEU!!')
         print('Jogue novamente...')
-        print(f'{'-=':^40}')
+        print(f"{'-=':^40}")
         v += 1
     else:
         print('Você PERDEU!!')
